@@ -1,0 +1,11 @@
+<!-- home.html -->
+{% extends 'base.html' %}
+
+{% block title %}Welcome{% endblock %}
+
+{% block content %}
+<section class="home-links">
+    <a href="{% url 'signup' %}" class="btn">Sign Up</a>
+    <a href="{% url 'login' %}" class="btn">Login</a>
+</section>
+{% endblock %}

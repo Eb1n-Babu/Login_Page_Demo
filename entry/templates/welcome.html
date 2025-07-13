@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}
+  welcome
+{% endblock %}py
+
+{% block content %}
+  <h2 class="welcome-title">Welcome, {{ user.username }}!</h2>
+
+  <div class="message-box">
+    <form method="POST" class="message-form">
+      {% csrf_token %}
+      <input type="text" name="message" placeholder="Write something..." required>
+      <button type="submit">Post</button>
+    </form>
+
+    <h3 class="message-heading">Messages</h3>
+    <ul class="message-list">
+      {% for msg in messages %}
+        <li class="message-item">
+          <span>{{ msg }}</span>
+          <form method="POST" class="delete-form">
+            {% csrf_token %}
+            <input type="hidden" name="delete" value="{{ forloop.counter0 }}">
+            <button type="submit">Delete</button>
+          </form>
+        </li>
+      {% empty %}
+        <li class="message-empty">No messages yet.</li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endblock %}

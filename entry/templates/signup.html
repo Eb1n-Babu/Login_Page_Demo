@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %}Sign Up - Fruity Fresh{% endblock %}
+
+{% block content %}
+<section class="login-section">
+  <h2>Create an Account</h2>
+ <form method="POST" class="signup-form">
+      {% csrf_token %}
+     {% if form.non_field_errors %}
+    <div class="alert error">
+      {% for error in form.non_field_errors %}
+        {{ error }}
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  <div class="form-group">
+    {{ form.username.label_tag }}
+    {{ form.username }}
+    {% for error in form.username.errors %}
+      <div class="alert error">{{ error }}</div>
+    {% endfor %}
+  </div>
+
+  <div class="form-group">
+    {{ form.password.label_tag }}
+    {{ form.password }}
+    {% for error in form.password.errors %}
+      <div class="alert error">{{ error }}</div>
+    {% endfor %}
+  </div>
+
+  <div class="form-group">
+    {{ form.confirm_password.label_tag }}
+    {{ form.confirm_password }}
+    {% for error in form.confirm_password.errors %}
+      <div class="alert error">{{ error }}</div>
+    {% endfor %}
+  </div>
+
+  <button type="submit" class="btn">Sign Up</button>
+</form>
+  <p>Already have an account?
+    <a href="{% url 'login' %}" class="signup-link">Log in</a><br>
+    <a href="{% url 'home' %}" class="signup-link">Home</a>
+  </p>
+</section>
+{% endblock %}
