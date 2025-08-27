@@ -76,14 +76,15 @@ WSGI_APPLICATION = 'Login_Demo.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
+'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'appdatabase',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': 'localhost',  # Change if using a remote server
-        'PORT': '3306',       # Default MySQL port
+        'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PASSWORD'),
+        'HOST': config('DB_HOST'),
+        'PORT': config('DB_PORT'),
     }
+
 }
 
 # Or wherever your login view is
