@@ -130,16 +130,10 @@ project-root/
 Dependencies
 Key dependencies include:
 
-Django==4.2.7
-djangorestframework==3.14.0
-django-cors-headers==3.13.0
-django-suit==0.2.28
-mysqlclient==2.2.7
-psycopg2-binary==2.9.10
-argon2-cffi==23.1.0
-bcrypt==4.3.0
-whitenoise==6.9.0
-pandas==2.2.3, numpy==2.2.6, matplotlib==3.10.3 (for data processing, if applicable)See requirements.txt for the full list.
+Django==5.2.5
+python-decouple==3.8
+gunicorn==23.0.0
+whitenoise==6.6.0
 
 .gitignore
 The .gitignore file ensures that sensitive or unnecessary files are excluded:
