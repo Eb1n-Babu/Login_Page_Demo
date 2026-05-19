@@ -1,0 +1,134 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  color: #333;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+}
+
+/* 🧱 Header & Footer */
+/* 🧱 Header & Footer - Dark Blue */
+header, footer {
+  background-color: #457496;  /* A calm deep blue */
+  color: #F5F5F5;
+  padding: 1.2em 0;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+footer {
+  font-size: 0.9em;
+}
+
+/* 🌐 Home Links Centered */
+.home-links {
+  height: 100vh;               /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;     /* Vertically center */
+  align-items: center;         /* Horizontally center */
+  gap: 1.5em;
+}
+
+/* 📦 Form Containers */
+.login-section,
+.signup-section {
+  max-width: 400px;
+  margin: 4vh auto;
+  padding: 1.2em 1em;
+  background-color: #E6F0FA;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+/* 🧱 Form Field Blocks */
+.form-group {
+  padding: 0.5em 0.8em;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #E6F0FA;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+/* 🧵 Input Styling */
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  padding: 0.7em;
+  font-size: 1em;
+  border: 2px solid #5DADE2;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* 🏷️ Labels */
+label {
+  font-weight: 600;
+  color: #333;
+  display: block;
+  margin-bottom: 0.3em;
+  text-align: left;
+}
+
+form p {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 0.1em;
+}
+
+/* 🎯 Buttons */
+.btn {
+  background-color: #4682B4;
+  color: white;
+  padding: 0.8em 2em;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  min-width: 180px;
+  align-self: center;
+}
+
+.btn:hover {
+  background-color: #4169E1;
+}
+
+/* 🔗 Link Styling */
+.signup-link {
+  color: #4169E1;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}
+
+/* ⚠️ Error Alerts */
+.alert.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px 15px;
+  margin: 8px 0;
+  border-left: 4px solid #f5c2c7;
+  border-radius: 4px;
+  font-size: 0.95em;
+}
